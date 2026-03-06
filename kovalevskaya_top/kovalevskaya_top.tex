@@ -4,13 +4,23 @@
 \usepackage{geometry}
 \geometry{margin=1in}
 \usepackage{titlesec}
+\usepackage[hyperfootnotes=false,linktoc=none]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=blue
+}
 
 % Center the section titles
 \titleformat{\section}
   {\normalfont\Large\bfseries\centering}{\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
 
-\title{\MakeUppercase{On the Problem of the Rotation \\ of a Rigid Body About a Fixed Point}}
+% Custom command for translator note references
+\newcommand{\tnref}[1]{\hyperlink{#1}{[#1]}}
+
+\title{{\small\textit{English translation of Sophie Kowalevski's}} \\[0.5em] \MakeUppercase{On the Problem of the Rotation \\ of a Rigid Body About a Fixed Point}}
 \author{Sophie Kowalevski\footnote{This memoir is the summary of a work to which the Academy of Sciences of Paris, in its solemn session of December 24, 1888, awarded the Bordin prize, raised from 3000 to 5000 francs.} \\ Stockholm}
 \date{}
 
@@ -671,12 +681,10 @@ and by designating by $\lambda$, $\mu$, $\nu$ the numbers 1, 2, 3 in any order, 
 \frac{\sigma_\lambda(u + 2\omega_\mu)}{\sigma(u + 2\omega_\mu)} &= -\frac{\sigma_\lambda u}{\sigma u}, \\
 \frac{\sigma_\lambda(u + 2\omega_\nu)}{\sigma(u + 2\omega_\nu)} &= -\frac{\sigma_\lambda u}{\sigma u}.
 \end{align*}
-One therefore obtains, by writing in the preceding expressions $w + 2\omega_1$, $w + 2\omega_2$, $w + 2\omega_3$ in place of $w$ and by setting
+One therefore obtains, by writing in the preceding expressions $w + 2\omega_1$, $w + 2\omega_2$, $w + 2\omega_3$ in place of $w$ and by setting \hypertarget{TN1-ref}{}\hypertarget{TN2-ref}{}\tnref{TN1}, \tnref{TN2}:
 
-% In the below, I have (e_1^2 - e_2^2) in last equation final bracket, SK has (e_1^2 - e_3^2) - I assume based on the pattern SK has a typo
-% I'm calling this eq 14 like SK but it could ahve been called 10...
 \begin{equation}
-    \tag{14}
+    \tag{14}\label{eq:14}
 \begin{aligned}
 h_0' &= \frac{\sigma_1(w) - \sigma_2(w) - \sigma_3(w)}{\sigma(w)}, \\
 h_1' &= \frac{(e_2 - e_3)\sigma_1(w) - (e_3 - e_1)\sigma_2(w) - (e_1 - e_2)\sigma_3(w)}{\sigma(w)}, \\
@@ -686,7 +694,7 @@ h_1'' &= \frac{-(e_2 - e_3)\sigma_1(w) + (e_3 - e_1)\sigma_2(w) - (e_1 - e_2)\si
 h_2'' &= \frac{-(e_2^2 - e_3^2)\sigma_1(w) + (e_3^2 - e_1^2)\sigma_2(w) - (e_1^2 - e_2^2)\sigma_3(w)}{\sigma(w)}, \\
 h_0''' &= \frac{-\sigma_1(w) - \sigma_2(w) + \sigma_3(w)}{\sigma(w)}, \\
 h_1''' &= \frac{-(e_2 - e_3)\sigma_1(w) - (e_3 - e_1)\sigma_2(w) + (e_1 - e_2)\sigma_3(w)}{\sigma(w)}, \\
-h_2''' &= \frac{-(e_2^2 - e_3^2)\sigma_1(w) - (e_3^2 - e_1^2)\sigma_2(w) + (e_1^2 - e_2^2)\sigma_3(w)}{\sigma(w)}, 
+h_2''' &= \frac{-(e_2^2 - e_3^2)\sigma_1(w) - (e_3^2 - e_1^2)\sigma_2(w) + (e_1^2 - e_3^2)\sigma_3(w)}{\sigma(w)}
 \end{aligned}
 \end{equation}
 the following
@@ -1510,7 +1518,7 @@ and, setting
 \[
 C = (a_3 - a_1)^{\frac{3}{2}}\frac{c_{01}c_{03}c_{12}c_{23}c_{14}c_{34}}{c_0^2c_2^2c_4^2},
 \]
-one has
+one has \hypertarget{TN3-ref}{}\tnref{TN3}:
 \begin{align*}
 P_1 &= \sqrt{(s_1 - e_1)(s_2 - e_1)} = \sqrt{(s_1 - a_3)(s_2 - a_3)} = -i\frac{C}{\sqrt{a_3 - a_1}}\frac{c_0c_2c_4}{c_{01}c_{12}c_{14}}\frac{\vartheta_3(v_1v_2)}{\vartheta_5(v_1v_2)}, \\
 P_2 &= \sqrt{(s_1 - e_2)(s_2 - e_2)} = \sqrt{(s_1 - a_2)(s_2 - a_2)} = -i\frac{C}{\sqrt{a_3 - a_1}}\frac{c_5c_2}{c_{12}c_{23}}\frac{\vartheta_2(v_1v_2)}{\vartheta_5(v_1v_2)}, \\
@@ -1551,10 +1559,9 @@ P_{25} &= \frac{\sqrt{(s_1 - e_1)(s_1 - e_3)(s_1 - k_1)(s_2 - e_2)(s_2 - k_2)} -
 P_{34} &= \frac{\sqrt{(s_1 - e_1)(s_1 - e_2)(s_1 - k_2)(s_2 - e_3)(s_2 - k_1)} - \sqrt{(s_1 - e_3)(s_1 - k_1)(s_2 - e_1)(s_2 - e_2)(s_2 - k_2)}}{s_1 - s_2} \\
 &= -iC\frac{c_5}{c_2}\frac{\vartheta_{04}(v_1v_2)}{\vartheta_5(v_1v_2)},
 \end{align*}
-% Possible typo here looks like (s_2 - e_1) is repeated in second sqrt in P35 in paper
 \begin{align*}
-P_{35} &= \frac{\sqrt{(s_1 - e_1)(s_1 - e_2)(s_1 - k_1)(s_2 - e_3)(s_2 - k_2)} - \sqrt{(s_1 - e_3)(s_1 - k_2)(s_2 - e_1)(s_2 - e_1)(s_2 - k_2)}}{s_1 - s_2} \\
-&= -iC\frac{c_5}{c_{03}}\frac{\vartheta_{01}(v_1v_2)}{\vartheta_5(v_1v_2)},
+P_{35} &= \frac{\sqrt{(s_1 - e_1)(s_1 - e_2)(s_1 - k_1)(s_2 - e_3)(s_2 - k_2)} - \sqrt{(s_1 - e_3)(s_1 - k_2)(s_2 - e_1)(s_2 - e_1)(s_2 - k_2)}}{s_1 - s_2} \label{eq:P35} \\
+&= -iC\frac{c_5}{c_{03}}\frac{\vartheta_{01}(v_1v_2)}{\vartheta_5(v_1v_2)}.
 \end{align*}
 \begin{align*}
 P_{45} &= \frac{\sqrt{(s_1 - e_1)(s_1 - e_2)(s_1 - e_3)(s_2 - k_1)(s_2 - k_2)} - \sqrt{(s_1 - k_1)(s_1 - k_2)(s_2 - e_1)(s_2 - e_2)(s_2 - e_3)}}{s_1 - s_2} \\
@@ -1871,4 +1878,17 @@ One therefore sees, according to this calculation, that it is possible to realis
 \raisebox{0.5ex}{\rule{1in}{0.5pt}}\quad$\bullet$\quad$\diamond$\quad$\bullet$\quad\raisebox{0.5ex}{\rule{1in}{0.5pt}}
 \end{center}
 
+\newpage
+\section*{Translator's Notes}
+
+
+\noindent\hypertarget{TN1}{}\textbf{\hyperlink{TN1-ref}{[TN1]} Equation numbering.} The author numbers equation \eqref{eq:14} as (14), though it could logically have been numbered (10) given that the previous numbered equation was (9). The original numbering has been retained in this translation.
+
+\noindent\hypertarget{TN2}{}\textbf{\hyperlink{TN2-ref}{[TN2]} Possible typographical error in equation 14.} In equation \eqref{eq:14}, the final term of the expression for $h_2'''$ contains $(e_1^2 - e_3^2)$ in the original text. Based on the symmetry pattern observed in the preceding expressions for $h_2'$ and $h_2''$, this may be a typographical error for $(e_1^2 - e_2^2)$. However, the original notation has been preserved in this translation.
+
+\noindent\hypertarget{TN3}{}\textbf{\hyperlink{TN3-ref}{[TN3]} Possible typographical error in expression for $P_{35}$.} The second square root in the numerator of the expression for $P_{35}$ contains the factor $(s_2 - e_1)$ repeated twice. By analogy with the patterns in the expressions for $P_{23}$, $P_{24}$, $P_{25}$, and $P_{34}$, one of these factors should likely be $(s_2 - e_2)$. However, the original notation has been preserved in this translation.
+
+\vspace{2em}
+
+\noindent{Translated by G. Hesketh 06/03/2026 and dedicated to Mich\`ele Audin: \textit{``And if we do not try\ldots\ I try.''}}
 \end{document}
