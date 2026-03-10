@@ -8,7 +8,7 @@ This paper was produced by uploading the scanned original French PDF to an Anthr
 
 ## PDF
 
-[Download the PDF](/kovalevskaya_top/kovalevskaya_top.pdf)
+The PDF is available on 'arXiv' at [https://arxiv.org/abs/2603.07154](https://arxiv.org/abs/2603.07154)
 
 ## Issues and corrections
 
